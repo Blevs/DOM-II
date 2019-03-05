@@ -58,3 +58,8 @@ window.addEventListener('keydown', (e) => {
 document.querySelectorAll(".main-navigation a").forEach(function(a) {
     a.addEventListener('click', (e) => e.preventDefault());
 });
+
+// load delay modal
+window.addEventListener('load', (e) => {
+    window.setTimeout(() => document.getElementById("modal").classList.toggle("hide") , 3000);
+});
