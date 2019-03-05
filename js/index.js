@@ -51,5 +51,10 @@ window.addEventListener('keydown', (e) => {
         window.scrollBy({top: -100, behavior: 'smooth'});
     }
 });
-// k for up
+
 // mouseover logo animation?
+
+// prevent nav link refreshing
+document.querySelectorAll(".main-navigation a").forEach(function(a) {
+    a.addEventListener('click', (e) => e.preventDefault());
+});
