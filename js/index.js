@@ -29,5 +29,12 @@ window.addEventListener('scroll', (e) => {
 
 // image hover greensock zoom/wiggle
 // j for down
+window.addEventListener('keydown', (e) => {
+    if (e.keyCode === 74 ) { // j
+        window.scrollBy({top: 100, behavior: 'smooth'});
+    } else if (e.keyCode === 75) {// k
+        window.scrollBy({top: -100, behavior: 'smooth'});
+    }
+});
 // k for up
 // mouseover logo animation?
