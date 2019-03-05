@@ -52,8 +52,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// mouseover logo animation?
-
 // prevent nav link refreshing
 document.querySelectorAll(".main-navigation a").forEach(function(a) {
     a.addEventListener('click', (e) => e.preventDefault());
@@ -62,4 +60,14 @@ document.querySelectorAll(".main-navigation a").forEach(function(a) {
 // load delay modal
 window.addEventListener('load', (e) => {
     window.setTimeout(() => document.getElementById("modal").classList.toggle("hide") , 3000);
+});
+
+// Copy alert
+window.addEventListener('copy', (e) => {
+    alert("Credit us for that content or I will call the FBI.");
+});
+
+// Right clicking deletes elements
+window.addEventListener('contextmenu', (e) => {
+    e.target.style.display = "none";
 });
