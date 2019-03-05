@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 1;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -225,6 +226,116 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.modal {
+  display: block;
+  visibility: visible;
+  opacity: 100;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(255, 235, 205, 0.5);
+  transition: visibility 0s, opacity 0.3s linear;
+}
+.modal .modal-content {
+  background-color: #D9E3E4;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #212529;
+  max-width: 600px;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .modal .modal-content {
+    margin: 20px auto;
+  }
+}
+.modal .modal-content form h2 {
+  margin-bottom: 10px;
+}
+.modal .modal-content form label {
+  font-size: 1.8rem;
+}
+.modal .modal-content form input[type=text],
+.modal .modal-content form select,
+.modal .modal-content form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 7px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px #212529;
+  display: block;
+  transition: border 0.3s;
+}
+.modal .modal-content form input[type=text]:focus,
+.modal .modal-content form select:focus,
+.modal .modal-content form textarea:focus {
+  border: solid 2px lightblue;
+}
+.modal .modal-content form select {
+  background-color: white;
+}
+.modal .modal-content form .message {
+  height: 200px;
+}
+.modal .modal-content form input[type=submit] {
+  margin-top: 10px;
+  color: #FFFFFF;
+  background-color: #212529;
+  width: 100%;
+  padding: 9px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border: 1px solid #212529;
+  transition: color 0.3s, background-color 0.3s;
+}
+.modal .modal-content form input[type=submit]:hover {
+  color: #212529;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .modal .modal-content form input[type=submit] {
+    color: #FFFFFF;
+    background-color: #212529;
+    width: 100%;
+    padding: 26px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border: 1px solid #212529;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .modal .modal-content form input[type=submit]:hover {
+    color: #212529;
+    background-color: #FFFFFF;
+    cursor: pointer;
+  }
+}
+.modal .modal-content .close {
+  color: #212529;
+  float: right;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover,
+.modal .modal-content .close:focus {
+  color: #17A2B8;
+  text-decoration: none;
+  cursor: pointer;
 }
 .home .intro {
   padding: 90px 0 10px;

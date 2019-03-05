@@ -30,3 +30,38 @@
     color: @button-bg;
   }
 }
+
+.input(@width: 100%) {
+  width: @width;
+  padding: 8px 10px;
+  margin: 7px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px @shark;
+  display: block;
+  transition: border 0.3s;
+  &:focus {
+    border: solid 2px lightblue;
+  }
+}
+
+.button(@width: 100%, @v-padding: 9px, @bg-color: @shark, @color: @white) {
+  color: @color;
+  background-color: @bg-color;
+  width: @width;
+  padding: @v-padding 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border: 1px solid @bg-color;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: @bg-color;
+    background-color: @color;
+    cursor: pointer;
+  }
+}
+
