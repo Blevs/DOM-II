@@ -18,6 +18,15 @@ document.getElementById("modal")
         }});
 
 // semitransparent nav bar when not at top scroll
+window.addEventListener('scroll', (e) => {
+    const nav = document.querySelector(".main-navigation");
+    if (window.scrollY === 0) {
+        nav.style.background = "white";
+    } else {
+        nav.style.background = "rgba(255, 255, 255, 0.8)";
+    }
+});
+
 // image hover greensock zoom/wiggle
 // j for down
 // k for up
