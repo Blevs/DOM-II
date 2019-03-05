@@ -28,6 +28,21 @@ window.addEventListener('scroll', (e) => {
 });
 
 // image hover greensock zoom/wiggle
+document.querySelectorAll(".container img").forEach(function(img) {
+    img.addEventListener('mouseover', (e) => {
+        const tl = new TimelineLite;
+        tl.to(e.target, 1, {
+            scaleX: 1.1,
+            scaleY: 1.1,
+            ease: Back.easeOut
+        });
+        tl.to(e.target, 1, {
+            scaleX: 1.0,
+            scaleY: 1.0,
+            ease: Back.easeOut.config(1.5)
+        });
+    });});
+
 // j for down
 window.addEventListener('keydown', (e) => {
     if (e.keyCode === 74 ) { // j
